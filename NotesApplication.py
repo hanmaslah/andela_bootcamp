@@ -1,8 +1,8 @@
 class NotesApplication():
    
-    def __init__(self,author, notes_list=[]):
+    def __init__(self,author):
         self.author=author
-        self.notes_list=notes_list
+        self.notes_list=[]
         
     def create(self, note_content):
         if note_content.strip():
