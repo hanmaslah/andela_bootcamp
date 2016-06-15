@@ -1,17 +1,26 @@
 def prime(n):
     """
-this functions takes a number and prints if it is a prime or not
-and if not, it prints the first factors
-
+This method returns a list of the first n prime numbers
+The method takes in an integer and prints a list with the length of the integer
+provided which will be a list of the first n prime numbers
     """
-	if n>1:
-		for i in range (2,n):
-			if n%i==0:
-				print (n, "is not prime")
-				print(i, "times", n//i, "is", n)
-				break
-			else:
-				print(n, "is prime")
+        
+    primes_list =[2]
+    curr=2
+    if n<1:
+                return "the list of prime numbers cannot be less than 1"
+    while True:
+        isprime=True
+        for prime in primes_list:
+            if curr%prime==0:
+                isprime=False
+                break
+        if isprime: 
+            primes_list.append(curr)
+        curr+=1
+        if len(primes_list)==n:
+            break
+    print( "The first", n, "prime numbers are: \n", primes_list)
 
 
 
