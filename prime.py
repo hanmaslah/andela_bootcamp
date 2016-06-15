@@ -1,15 +1,27 @@
-def prime(k):
-"""
-This is a method to print the numbers in the range provided
-and prints whether prime or not prime 
-"""
-	if k>1:
-		for i in range(2,k):
-			if k%i==0:
-				print(k, "is not a prime number")
-				break
-		else:
-			print(k, "is a prime number")
-	else:
-		return None 
-	prime(k-1)
+def prime(n):
+    """
+This method returns a list of the first n prime numbers
+The method takes in an integer and prints a list with the length of the integer
+provided which will be a list of the first n prime numbers
+    """
+        
+    primes =[2]
+    curr=2
+    if n<1:
+                return "the list of prime numbers cannot be less than 1"
+    while True:
+        isprime=True
+        for prime in primes:
+            if curr%prime==0:
+                isprime=False
+                break
+        if isprime: 
+            primes.append(curr)
+        curr+=1
+        if len(primes)==n:
+            break
+    print( "The first", n, "prime numbers are: \n", primes)
+
+
+
+    
