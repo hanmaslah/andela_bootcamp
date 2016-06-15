@@ -24,7 +24,7 @@ Test returns buzz when input is divisible by 5
           """
 Test returns fizzbuzz when input is divisible by both 3 and 5
           """
-          self.assertEqual(fizzbuzz.fizz_buzz(45), 'fizzbuzz')
+          self.assertEqual(fizzbuzz.fizz_buzz(0), 'fizzbuzz')
     def test_returns_number_if_not_divisible_by_five_or_three(self):
           """
 Test returns number when input is divisible by both 3 and 5
