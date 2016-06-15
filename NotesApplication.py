@@ -35,12 +35,7 @@ search for a word in the notes list.
         elif note_id>=len(self.notes_list) or note_id < 0:
             print ("Index out of range")
         else:
-            idx=0
-            for i in self.notes_list:
-                if note_id==idx:
-                    return self.notes_list[idx]
-                idx+=1
-                    
+            return self.notes_list[note_id]   
         
         
     def search(self,search_text):
