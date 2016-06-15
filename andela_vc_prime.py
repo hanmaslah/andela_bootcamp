@@ -3,6 +3,8 @@ def prime(n):
 This method returns a list of the first n prime numbers
 The method takes in an integer and prints a list with the length of the integer
 provided which will be a list of the first n prime numbers
+It was to print whether a number is prime or not but for the sake of conflict,
+had to change the code
     """
         
     primes =[2]
