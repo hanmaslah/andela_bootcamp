@@ -1,1 +1,0 @@
-# andela_logic
