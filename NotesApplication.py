@@ -1,4 +1,9 @@
 class NotesApplication():
+    """
+This class creates an application for holding notes and categorises
+them according to the author and gives them an index. You can also
+search for a word in the notes list.
+    """
    
     def __init__(self,author):
         self.author=author
