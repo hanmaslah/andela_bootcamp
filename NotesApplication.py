@@ -10,12 +10,20 @@ search for a word in the notes list.
         self.notes_list=[]
         
     def create(self, note_content):
+        """
+creates a list of notes written by the author
+        """
+
         if note_content.strip():
             
             self.notes_list.append(note_content)
         else:
             return "enter some notes"
     def list(self):
+        """
+Returns a list of all the notes written by the author
+        """
+
         if self.notes_list==[]:
             return "There are no notes in the list"
         else:
@@ -29,6 +37,10 @@ search for a word in the notes list.
                 
         
     def get(self,note_id):
+        """
+Returns the notes of the given index
+        """
+
         if not isinstance( note_id, int ):
             print("<",note_id,">should be a digit")
         elif note_id>=len(self.notes_list) or note_id < 0:
@@ -38,6 +50,9 @@ search for a word in the notes list.
         
         
     def search(self,search_text):
+        """
+Searches for all the occurence of the given word in the notes list
+        """
         
         if not search_text.strip():
             return "enter something to search"
@@ -54,6 +69,10 @@ search for a word in the notes list.
                     
         
     def edit(self,note_id,new_content):
+        """
+Edits the notes in the given index to the new content
+        """
+
         if not isinstance( note_id, int ):
             print("<",note_id,">should be a digit")
         elif note_id>=len(self.notes_list) or note_id < 0:
